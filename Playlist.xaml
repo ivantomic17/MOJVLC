@@ -1,0 +1,36 @@
+﻿<Window x:Name="PlaylistWin" x:Class="MojVLC.Playlist"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MojVLC"
+        mc:Ignorable="d"
+        Title="Playlist"  Height="280" Width="600" MinWidth="600" MinHeight="275" SizeToContent="Height"  Loaded="Playlist_Loaded" ResizeMode="NoResize" >
+    <StackPanel Grid.Row="1" Orientation="Horizontal">
+        <StackPanel Grid.Row="1" Orientation="Vertical" Width="300">
+        <TextBlock Name="TextBlockURL"  Margin="10 5 10 0" TextWrapping="Wrap">Path: </TextBlock>
+            <TextBlock Name="TextBlockSize"  Margin="10 5 10 0" TextWrapping="Wrap">Size:</TextBlock>
+            <TextBlock Name="TextBlockDuration"  Margin="10 5 10 0" TextWrapping="Wrap">Duration:</TextBlock>
+            <TextBlock Name="TextBlockDatum"  Margin="10 5 10 0" TextWrapping="Wrap">Date: </TextBlock>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Label Margin="6 0 0 0">Year:</Label>
+                <TextBox Name="TextBoxYear"  Margin="14 0 10 0" Width="100" Height="20" TextWrapping="Wrap"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Margin="10 0 0 10" TextWrapping="Wrap">Genre:</TextBlock>
+            <ComboBox Name="ComboGenre"  Margin="10 0 0 10" ></ComboBox>
+        </StackPanel>
+           
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 30 0 0" >
+            <Button Content="Save" Width="50" Height="20" Margin="180 0 0 0" Click="Save_Click" />
+            <Button Content="Cencel" Width="50" Height="20"  Margin="10 0 0 0" Click="Cencel_Click" />
+        </StackPanel>
+        </StackPanel>
+        <Border BorderThickness="1"
+        BorderBrush="#FF000000" Margin="30 5 5 5">
+            <Image x:Name="image" Height="180"   Width="250" Source="Pictures/logo2.png" MouseLeftButtonDown="image_MouseLeftButtonDown">
+            </Image>
+        </Border>
+    </StackPanel>
+</Window>
